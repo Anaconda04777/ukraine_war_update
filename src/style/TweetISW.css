@@ -1,0 +1,64 @@
+.tweet-isw img {
+  max-width: 100%;
+}
+
+.tweet-isw {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.tweet-isw {
+  max-height: 65.45vw;
+  max-width: max-content;
+}
+
+.tweet {
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.tweet > p {
+  margin-bottom: 0.5rem;
+}
+
+.dati-profilo {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+
+  margin-bottom: 0.5rem;
+}
+
+.dati-profilo > img {
+  border-radius: 30px;
+}
+
+.dati-profilo > * {
+  margin: 0.3rem;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.content {
+  width: 25vw;
+}
+
+.content > img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.content {
+  cursor: inherit;
+}

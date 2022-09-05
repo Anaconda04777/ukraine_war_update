@@ -1,0 +1,13 @@
+.uk-intelligence img {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.uk-intelligence {
+  padding: 1rem;
+  height: 100%;
+}
+
+.uk-intelligence h3 {
+  align-self: flex-start;
+}

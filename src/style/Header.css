@@ -1,0 +1,9 @@
+header {
+  /*background-color: #fdef9b;*/
+  padding: 1rem;
+}
+
+header * {
+  color: #fdef9b;
+  font-family: "Aboreto", cursive;
+}
