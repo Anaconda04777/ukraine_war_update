@@ -13,7 +13,7 @@
 }
 
 .tweet {
-  margin: 1rem;
+  margin-bottom: 2rem;
   padding: 1rem;
   cursor: pointer;
 }
@@ -51,7 +51,8 @@
 }
 
 .content {
-  width: 25vw;
+  max-width: 35vw;
+  margin: 0;
 }
 
 .content > img {
@@ -61,4 +62,20 @@
 
 .content {
   cursor: inherit;
+}
+
+@media only screen and (max-width: 1080px) {
+  .content {
+    max-width: 43vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tweet-isw {
+    max-height: 100vw;
+  }
+
+  .content {
+    max-width: 70vw;
+  }
 }

@@ -1,13 +1,12 @@
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.6fr 1.4fr;
-  grid-template-rows: 1fr 1fr 0.4fr 1fr 1fr 1fr 1fr;
-  gap: 30px 30px;
+  grid-template-columns: 1fr 1.3fr 0.7fr 0.6fr 1.4fr;
+  grid-template-rows: 1fr 1.3fr 0.7fr 1fr 1.5fr 1.5fr;
+  gap: 20px 20px;
   grid-template-areas:
     "uk-intelligence uk-intelligence civil-losses civil-losses tweet-isw"
     "uk-intelligence uk-intelligence articles articles tweet-isw"
-    "uk-intelligence uk-intelligence articles articles tweet-isw"
-    "uamap uamap uamap uamap tweet-isw"
+    "mappe mappe articles articles tweet-isw"
     "uamap uamap uamap uamap tweet-isw"
     "uamap uamap uamap uamap tweet-isw"
     "uamap uamap uamap uamap tweet-isw";
@@ -31,9 +30,74 @@ main {
   grid-area: articles;
 }
 
+.mappe {
+  grid-area: mappe;
+}
+
 /*liveUaMap */
 
 .uamap iframe {
   width: 100%;
   height: 100%;
+}
+
+.mappe {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+}
+
+.mappe * {
+  margin: 0.5rem;
+  padding: 2vw;
+  width: 20vw;
+  height: 5vw;
+  font-size: 1vw;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1080px) {
+  main {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "uk-intelligence civil-losses"
+      "uk-intelligence tweet-isw"
+      "articles tweet-isw"
+      "articles tweet-isw"
+      "mappe tweet-isw"
+      "uamap uamap"
+      "uamap uamap"
+      "uamap uamap";
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 1fr 1fr 0.5fr 0.3fr 1fr 1.5fr 1.7fr;
+    grid-template-areas:
+      "civil-losses"
+      "uk-intelligence "
+      "uk-intelligence"
+      "articles"
+      "articles"
+      "tweet-isw"
+      " tweet-isw"
+      " tweet-isw"
+      "mappe"
+      "uamap"
+      "uamap"
+      "uamap";
+  }
+
+  .mappe * {
+    font-size: 2vw;
+    height: 7vw;
+  }
+
+  .mappe {
+    margin-top: 2rem;
+  }
 }

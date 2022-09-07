@@ -12,7 +12,7 @@ export default function UkIntelligence() {
   }, []);
 
   return (
-    <div className="uk-intelligence glassmorphism centrator">
+    <div className="uk-intelligence glassmorphism">
       <h3>Update of Britannic Intelligence:</h3>
       <p>{data != undefined ? data.testo : ""}</p>
       <div className="centrator">
@@ -32,7 +32,7 @@ export default function UkIntelligence() {
     };
 
     fetch(
-      "https://twitter154.p.rapidapi.com/user/tweets?username=defencehq&limit=10",
+      "https://twitter154.p.rapidapi.com/user/tweets?username=defencehq&limit=40",
       options
     )
       .then((response) => response.json())

@@ -22,7 +22,7 @@ export default function TweetISW() {
                   <h3>{i.nome}</h3>
                 </div>
                 <p className="sm">{i.date}</p>
-                <p>{i.testo}</p>
+                <p className="testo-tweet">{i.testo}</p>
                 <img src={i.immagine} />
               </div>
             );
@@ -42,23 +42,24 @@ export default function TweetISW() {
   function showModal(ogg) {
     console.log(ogg.target.parentElement);
     let tweet = ogg.target.parentElement;
-    document.querySelector(".App").innerHTML += `
-    <div class="modal centrator">
-      <div class="content tweet glassmorphism">
-        <div class="dati-profilo">
-          <img src=${tweet.querySelector(".dati-profilo > img").src} />
-          <h3>${tweet.querySelector(".dati-profilo > h3").innerHTML}</h3>
-        </div>
-        <p>${tweet.querySelector(".tweet > p").innerHTML}</p>
-        <img src=${tweet.querySelector(".tweet >img").src} />
+    let str = `<div class="modal centrator">
+    <div class="content tweet glassmorphism">
+    
+      <div class="dati-profilo">
+        <img src=${tweet.querySelector(".dati-profilo > img").src} />
+        <h3>${tweet.querySelector(".dati-profilo > h3").innerHTML}</h3>
       </div>
+      
+      
+      <img src=${tweet.querySelector(".tweet > img").src} />
     </div>
-    `;
+  </div>`;
+
+    document.querySelector(".App").insertAdjacentHTML("beforeend", str);
 
     console.log(document.querySelectorAll(".modal"));
     document.querySelectorAll(".modal").forEach((i) =>
       i.addEventListener("click", function (e) {
-        console.log(e.target.classList[0]);
         if (e.target.classList[0] === "modal") {
           e.target.remove();
           attachEvent();

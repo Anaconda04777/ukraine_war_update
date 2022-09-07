@@ -5,3 +5,7 @@
 .api-repo a:nth-child(2) {
   margin-left: 0;
 }
+
+footer {
+  padding: 2rem;
+}

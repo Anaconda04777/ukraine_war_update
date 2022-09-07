@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
 
+:root {
+  --title-color: #fdef9b;
+  --font-color: rgb(190, 190, 190);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
-  color: rgb(190, 190, 190);
+  color: var(--font-color);
   /*color: #fdef9b;*/
 
   /*
@@ -29,6 +34,24 @@ a {
   background-color: rgba(19, 19, 31, 0.269);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.btn-grad {
+  background-color: var(--title-color);
+  color: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.btn-grad:hover {
+  background-color: var(--font-color);
+}
+
+.hide {
+  display: none;
 }
 
 /* Text sizes */
